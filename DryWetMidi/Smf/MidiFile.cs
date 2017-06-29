@@ -241,7 +241,7 @@ namespace Melanchall.DryWetMidi.Smf
         /// just read is invalid.</exception>
         /// <exception cref="InvalidMetaEventParameterValueException">Value of a meta event's parameter
         /// just read is invalid.</exception>
-        private static MidiFile Read(Stream stream, ReadingSettings settings = null)
+        public static MidiFile Read(Stream stream, ReadingSettings settings = null)
         {
             if (stream == null)
                 throw new ArgumentNullException(nameof(stream));
@@ -358,7 +358,7 @@ namespace Melanchall.DryWetMidi.Smf
         /// <exception cref="InvalidOperationException">Time division is null.</exception>
         /// <exception cref="TooManyTrackChunksException">Count of track chunks presented in the file
         /// exceeds maximum value allowed for MIDI file.</exception>
-        private void Write(Stream stream, MidiFileFormat format = MidiFileFormat.MultiTrack, WritingSettings settings = null)
+        public void Write(Stream stream, MidiFileFormat format = MidiFileFormat.MultiTrack, WritingSettings settings = null)
         {
             if (stream == null)
                 throw new ArgumentNullException(nameof(stream));
